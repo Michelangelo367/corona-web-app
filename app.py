@@ -92,10 +92,9 @@ def clean_data(dropdown_value):
 	daily_deaths = [0]
 	daily_recovered = [0]
 	for i in range(1,len(cases)):
-		daily_cases.append(cases[i]-cases[i-1])
-		daily_deaths.append(deaths[i]-deaths[i-1])
-		daily_recovered.append(recovered[i]-recovered[i-1])
-	daily_deaths = [abs(num) for num in daily_deaths]
+		daily_cases.append(abs(cases[i]-cases[i-1]))
+		daily_deaths.append(abs(deaths[i]-deaths[i-1]))
+		daily_recovered.append(abs(recovered[i]-recovered[i-1]))
 
 	active_cases = cases - deaths - recovered
 
