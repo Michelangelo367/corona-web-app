@@ -2,10 +2,9 @@ Body {
 	background-color: #797979;
 }
 
-
-Div{
-	background-color: #797979;
-}
+/*Div{
+	background-color: #797979 !important;
+}*/
 
 H1{
 	text-align: center;
@@ -21,10 +20,15 @@ P{
 	font-size: small;
 }
 
+
 .selectDrop{
 	width: 20%;
-	margin-left: auto;
-	margin-right: auto;
+/*	margin-left: auto;
+	margin-right: auto;*/
+	margin-left: 58%;
+	margin-right: 22%;
+	background-color: #797979 !important;
+
 }
 
 .selectSlider{
