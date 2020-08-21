@@ -1,3 +1,5 @@
+# corona-dash-a8fe8
+
 import dash
 import dash_table
 import pandas as pd
@@ -32,11 +34,11 @@ for i, country in enumerate(labels):
 	if len(cum_cases) > 1:
 		for j in range(len(cum_cases)):
 				value += cum_cases[j][-1]
-		values.append(round(value/population[i]))
+		values.append(round(value))    # /population[i]))
 	else:
-		values.append(round(cum_cases[0][-1]/population[i]))
+		values.append(round(cum_cases[0][-1])) #/population[i]))
 pie_chart.add_trace(go.Pie(labels=labels, values=values, hole=0.3))
-pie_chart.update_layout(title='Cases per million', uniformtext_minsize=10, uniformtext_mode='hide')
+pie_chart.update_layout(title='Cases', uniformtext_minsize=10, uniformtext_mode='hide')
 pie_chart.update_traces(textposition='inside', textinfo='percent+label')
 
 # test DataTable
